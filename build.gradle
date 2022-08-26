@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.7.3")
     }
 }
 
@@ -17,7 +17,7 @@ apply plugin: 'org.springframework.boot'
 
 jar {
     baseName = 'iw-tech-test'
-    version =  '0.1.0'
+    version =  '0.2.0'
 }
 
 repositories {
@@ -28,6 +28,6 @@ sourceCompatibility = 11
 targetCompatibility = 11
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile("junit:junit")
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.7.3'
+    testImplementation 'junit:junit'
 }
