@@ -82,4 +82,9 @@ public class RatingController {
         }
     }
 
+    @RequestMapping(value = "/status", produces = "application/json")
+    public String status() {
+        return "{\"status\":\"ok\"}";
+    }
+
 }
