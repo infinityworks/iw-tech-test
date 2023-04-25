@@ -1,33 +1,22 @@
-group 'com.infinityworks'
-version '1.0-SNAPSHOT'
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE")
-    }
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.5'
+	id 'io.spring.dependency-management' version '1.1.0'
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-
-jar {
-    baseName = 'iw-tech-test'
-    version =  '0.1.0'
-}
+group = 'infinityworks.com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
-sourceCompatibility = 11
-targetCompatibility = 11
-
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile("junit:junit")
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
 }

@@ -1,4 +1,4 @@
-package com.infinityworks.techtest.model;
+package infinityworks.com.iwtechtest.model;
 
 public class Authority {
 
