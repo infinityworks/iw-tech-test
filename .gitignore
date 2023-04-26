@@ -2,7 +2,7 @@
 .idea/
 *.iws
 out/
-
+.DS_Store
 .gradle
 /build/
 
