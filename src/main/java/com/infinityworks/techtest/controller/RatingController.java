@@ -1,9 +1,9 @@
 package com.infinityworks.techtest.controller;
 
-import com.infinityworks.techtest.model.Authority;
 import com.infinityworks.techtest.model.AuthorityRatingItem;
 import com.infinityworks.techtest.model.FSAAuthority;
 import com.infinityworks.techtest.model.FSAAuthorityList;
+import com.infinityworks.techtest.model.Authority;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,11 +18,9 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api")
 public class RatingController {
 
     private final RestTemplate restTemplate;
-
     public RatingController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
@@ -32,7 +30,8 @@ public class RatingController {
      *
      * @return list of authorities
      */
-    @RequestMapping(value = "", produces = "application/json")
+    //@RequestMapping(value = "", produces = "application/json")
+    @RequestMapping("/api")
     public List<Authority> getList() {
 
         HttpHeaders headers = new HttpHeaders();
@@ -57,7 +56,7 @@ public class RatingController {
      * @param authorityId the authority to calculate ratings for
      * @return the ratings to display
      */
-    @RequestMapping(value = "/{authorityId}", produces = "application/json")
+    @RequestMapping("/api/{authorityId}")
     public List<AuthorityRatingItem> getAuthority(@PathVariable("authorityId") int authorityId) {
 
         //This is just sample data to demonstrate the contract of the API

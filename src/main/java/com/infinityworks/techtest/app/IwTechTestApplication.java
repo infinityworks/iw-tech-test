@@ -8,15 +8,15 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @ComponentScan("com.infinityworks.techtest")
-public class Application {
+public class IwTechTestApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(IwTechTestApplication.class, args);
+	}
+	@Bean
+	public RestTemplate getRestTemplateBean(){
+		return new RestTemplate();
+	}
 
-    @Bean
-    public RestTemplate getRestTemplateBean(){
-        return new RestTemplate();
-    }
 
 }
