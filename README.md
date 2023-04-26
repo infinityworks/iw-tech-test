@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-* JDK 11
+* JDK 17
 * Gradle (we've included the wrapper just in case)
 * Access to the internet
 * Suitable development environment
