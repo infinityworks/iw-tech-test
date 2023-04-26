@@ -20,4 +20,3 @@
 * Please do not fork this repository.
 * Please do not commit your code to GitHub.
 * Send us your code, zipped up, as per the instructions in email we sent.
-* 

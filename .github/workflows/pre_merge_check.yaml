@@ -9,6 +9,7 @@ on:
 jobs:
   build_project:
     name: Build project
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Setup JDK 17
